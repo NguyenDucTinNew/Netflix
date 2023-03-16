@@ -1,0 +1,33 @@
+﻿@model WebsiteQuanLyTours.Models.DiaDiemHotTrongNuoc
+
+@{
+    ViewBag.Title = "ThemMoi";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>ThemMoi</h2>
+
+<form action="/DiaDiemHotTrongNuoc/ThemMoi" method="post">
+    <div class="row">
+        <div class="col-md-6">
+            @*
+                
+            <label for="DiaDiemHotTrongNuoc1">Địa điểm hot nước ngoài</label>
+            <input type="text"
+                   class="form-control"
+                   id="DiaDiemHotTrongNuoc1"
+                   name="DiaDiemHotTrongNuoc1"
+                   placeholder="Dia Diem HotTrong Nuoc" />
+            *@
+            @Html.TextBoxFor(row => row.MaDiaDiemHotTrongNuoc, new { @class = "form-control", placeholder = "Dia diem hot trong nuoc" })
+            @Html.ValidationMessageFor(row => row.MaDiaDiemHotTrongNuoc)
+        </div>
+
+    </div>
+    <div class="row">
+
+        <button type="submit" class="btn btn-success">Tạo</button>
+        <a href="/DiaDiemHotTrongNuoc/Index" class="btn btn-danger">Cancel</a>
+
+    </div>
+</form>

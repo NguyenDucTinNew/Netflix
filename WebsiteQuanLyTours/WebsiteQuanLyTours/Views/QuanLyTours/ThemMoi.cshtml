@@ -1,0 +1,227 @@
+﻿@model WebsiteQuanLyTours.Models.Tour
+
+@{
+    ViewBag.Title = "ThemMoi";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>ThemMoi</h2>
+@*
+    
+<form action="/QuanLyTours/ThemMoi" method="post"></form>
+*@
+    @using (Html.BeginForm("ThemMoi", "QuanLyTours", FormMethod.Post, new { enctype = "multipart/dorm-data" }))
+    {
+
+    <div class="row">
+        <div class="col-md-6">
+            @Html.LabelFor(row => row.TenTour)
+            @Html.TextBoxFor(row => row.TenTour, new { @class = "form-control", placeholder = "Tên tour" })
+            @Html.ValidationMessageFor(row => row.TenTour)      
+            
+    
+    
+    @*
+                
+            <label for="TenTour">Tên tour</label>
+            <input type="text"
+                   class="form-control"
+                   id="TenTour"
+                   name="TenTour"
+                   placeholder="Ten Tour" />
+            *@
+        </div>
+        <div class="col-md-6">
+            <label for="ThoiGianTour">Thời gian tour</label>
+            
+            @*
+                
+            *@
+            <input type="date"
+                   class="form-control"
+                   id="ThoiGianTour"
+                   name="ThoiGianTour"
+                   placeholder="Thoi Gian Tour" />
+        </div>
+        <div class="col-md-6">
+            <label for="Gia">Giá</label>
+            @Html.TextBoxFor(row => row.Gia, new { @class = "form-control", placeholder = "Giá" })
+            @Html.ValidationMessageFor(row => row.Gia)
+
+            @*
+
+        <input type="number"
+               class="form-control"
+               id="Gia"
+               name="Gia"
+               placeholder="Gia" />
+            *@
+        </div>
+        <div class="col-md-6">
+            <label for="ChuongTrinhTour">Chương trình tour</label>
+            @Html.TextBoxFor(row => row.ChuongTrinhTour, new { @class = "form-control", placeholder = "Chương trình tour" })
+            @Html.ValidationMessageFor(row => row.ChuongTrinhTour)
+
+            @*
+
+        <input type="text"
+               class="form-control"
+               id="ChuongTrinhTour"
+               name="ChuongTrinhTour"
+               placeholder="ChuongTrinhTour" />
+            *@
+        </div>
+        <div class="col-md-6">
+            <label for="MaLoaiTour">Loại tuor</label>
+
+            @Html.DropDownListFor(row => row.MaLoaiTour, new SelectList(ViewBag.LoaiTours, "MaLoaiTour", "LoaiTours"), "vui long chọn..."
+    , new { @class = "form-control" })
+            @Html.ValidationMessageFor(row => row.MaLoaiTour)
+            @*
+                
+            <select class="form-control"
+                    id="MaLoaiTour"
+                    name="MaLoaiTour"
+                    placeholder="Ma Loai Tour">
+
+                <option value="">Vui lòng chọn</option>
+                @foreach (var cat in ViewBag.LoaiTours)
+                {
+                    <option value="@cat.MaLoaiTour ">
+                        @cat.LoaiTours
+                    </option>
+                        }
+                   
+                </select>
+            *@
+            
+        </div>
+        <div class="col-md-6">
+            <label for="MaChuDe"> Chủ đề</label>
+
+            @Html.DropDownListFor(row => row.MaChuDe, new SelectList(ViewBag.TourTheoChuDe, "MaChuDe", "TourTheoChuDe1"), "vui long chọn..."
+    , new { @class = "form-control" })
+            @Html.ValidationMessageFor(row => row.MaChuDe)
+            @*
+
+        <select class="form-control"
+                 id="MaChuDe"
+                 name="MaChuDe"
+                 placeholder="Ma Chu De">
+
+            <option value="">Vui lòng chọn</option>
+            @foreach (var cat in ViewBag.TourTheoChuDe)
+            {
+                <option value="@cat.MaChuDe ">
+                    @cat.TourTheoChuDe1
+                </option>
+            }
+
+            </select>
+            *@
+
+
+        </div>
+        <div class="col-md-6">
+            <label for="MaTourNuocNgoai"> Tour nước ngoài</label>
+            @Html.DropDownListFor(row => row.MaTourNuocNgoai, new SelectList(ViewBag.TourNuocNgoai, "MaTourNuocNgoai", "TourNuocNgoai1"), "vui long chọn..."
+  , new { @class = "form-control" })
+            @Html.ValidationMessageFor(row => row.MaTourNuocNgoai)
+
+            @*
+            <select class="form-control"
+                    id="MaTourNuocNgoai"
+                    name="MaTourNuocNgoai"
+                    placeholder="Ma Tour Nuoc Ngoai">
+
+                <option value="">Vui lòng chọn</option>
+                @foreach (var cat in ViewBag.TourNuocNgoai)
+                {
+                    <option value="@cat.MaTourNuocNgoai ">
+                        @cat.TourNuocNgoai1
+                    </option>
+                }
+            </select>
+                
+            *@
+
+        </div>
+        <div class="col-md-6">
+            <label for="MaTourTrongNuoc">Tour trong nước </label>
+
+            @Html.DropDownListFor(row => row.MaTourTrongNuoc, new SelectList(ViewBag.TourTrongNuoc, "MaTourTrongNuoc", "TourTrongNuoc1"), "vui long chọn..."
+  , new { @class = "form-control" })
+            @Html.ValidationMessageFor(row => row.MaTourTrongNuoc)
+
+            @*
+                
+            <select class="form-control"
+                    id="MaTourTrongNuoc"
+                    name="MaTourTrongNuoc"
+                    placeholder="Ma Tour Trong Nuoc">
+                <option value="">Vui lòng chọn</option>
+                @foreach (var cat in ViewBag.TourTrongNuoc)
+                {
+                    <option value="@cat.MaTourTrongNuoc ">
+                        @cat.TourTrongNuoc1
+                    </option>
+                }
+            </select>
+            *@
+        </div>
+        <div class="col-md-6">
+            <label for="MaDiaDiemHotNuocNgoai">Địa điểm hot nước ngoài</label>
+
+            @Html.DropDownListFor(row => row.MaDiaDiemHotNuocNgoai, new SelectList(ViewBag.DiaDiemHotNuocNgoai, "MaDiaDiemHotNuocNgoai", "DiaDiemHotNuocNgoai1"), "vui long chọn..."
+  , new { @class = "form-control" })
+            @Html.ValidationMessageFor(row => row.MaDiaDiemHotNuocNgoai)
+
+            @*
+                
+            <select class="form-control"
+                    id="MaDiaDiemHotNuocNgoai"
+                    name="MaDiaDiemHotNuocNgoai"
+                    placeholder="Ma Dia Diem Hot Nuoc Ngoai">
+                <option value="">Vui lòng chọn</option>
+                @foreach (var cat in ViewBag.DiaDiemHotNuocNgoai)
+                {
+                    <option value="@cat.MaDiaDiemHotNuocNgoai ">
+                        @cat.DiaDiemHotNuocNgoai1
+                    </option>
+                }
+            </select>
+            *@
+        </div>
+        <div class="col-md-6">
+            <label for="MaDiaDiemHotTrongNuoc">Địa điểm hot trong nước</label>
+
+            @Html.DropDownListFor(row => row.MaDiaDiemHotTrongNuoc, new SelectList(ViewBag.DiaDiemHotTrongNuoc, "MaDiaDiemHotTrongNuoc", "DiaDiemHotTrongNuoc1"), "vui long chọn..."
+  , new { @class = "form-control" })
+            @Html.ValidationMessageFor(row => row.MaDiaDiemHotTrongNuoc)
+
+            @*
+                
+            <select class="form-control"
+                    id="MaDiaDiemHotTrongNuoc"
+                    name="MaDiaDiemHotTrongNuoc"
+                    placeholder="Ma Dia Diem Hot Trong Nuoc">
+                <option value="">Vui lòng chọn</option>
+                @foreach (var cat in ViewBag.DiaDiemHotTrongNuoc)
+                {
+                    <option value="@cat.MaDiaDiemHotTrongNuoc ">
+                        @cat.DiaDiemHotTrongNuoc1
+                    </option>
+                }
+            </select>
+            *@
+        </div>
+    </div>
+    @Html.ValidationSummary()
+    <div class="row">
+      
+        <button type="submit" class="btn btn-success">Tạo</button>
+        <a href="/QuanLyTours/Index" class="btn btn-danger">Cancel</a>
+        
+    </div>
+    }
+

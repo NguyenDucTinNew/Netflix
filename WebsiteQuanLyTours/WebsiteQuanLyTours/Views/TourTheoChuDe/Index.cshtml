@@ -1,0 +1,31 @@
+﻿@model List<WebsiteQuanLyTours.Models.TourTheoChuDe>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<a href="/TourTheoChuDe/ThemMoi">Thêm mới </a>
+<form class="d-flex-row align-items-center flex-wrap" action="/TourTheoChuDe/index">
+    <label for="search" class="mx-2 my-1">Search</label>
+    <input type="search" class="form-control w-auto" id="search" name="search" placeholder="Search" value="@ViewBag.search" />
+    <button type="submit" class=" btn btn-primary mx-2 ">go</button>
+</form>
+<table class="table">
+    <tr>
+        <th>Mã chủ đề </th>
+        <th>Chủ đề</th>
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.MaChuDe</td>
+            <td>@item.TourTheoChuDe1</td>
+            <td><a href="/TourNuocNgoai/ChinhSua/@item.MaChuDe">Edit</a></td>
+            <td><a href="/TourNuocNgoai/Xoa/@item.MaChuDe">Delete</a></td>
+        </tr>
+    }
+</table>

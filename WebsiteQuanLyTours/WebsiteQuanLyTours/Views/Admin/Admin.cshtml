@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Admin";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>Admin</h2>
+<div class="DangNhapTK">
+
+    <h2>Đăng nhập</h2>
+    <h1>@ViewBag.ThongBao</h1>
+    @using (Html.BeginForm())
+    {
+        <span>Tài khoản: </span> <br />
+        @Html.TextBox("txtTaiKhoan");
+
+        <br />
+        <span>Mật khẩu: </span><br />
+
+
+
+        <input name="txtMatkhau" type="text" />
+
+        <br />
+        <input type="submit" id="txtSubmit" name="btnSubmit" />
+    }
+</div>
+

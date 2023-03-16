@@ -1,0 +1,30 @@
+﻿@model WebsiteQuanLyTours.Models.TourTrongNuoc
+
+@{
+    ViewBag.Title = "ChinhSua";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>ChinhSua</h2>
+
+<form action="/TourTrongNuoc/ChinhSua/@Model.MaTourTrongNuoc" method="post">
+    <input type="hidden" name="MaTourTrongNuoc" value="@Model.MaTourTrongNuoc" />
+    <div class="row">
+        <div class="col-md-6">
+            <label for="TourTrongNuoc1">Địa điểm hot nước ngoài</label>
+            <input type="text"
+                   class="form-control"
+                   id="TourTrongNuoc1"
+                   name="TourTrongNuoc1"
+                   placeholder="Tour Trong Nuoc"
+                   value="@Model.TourTrongNuoc1" />
+        </div>
+
+    </div>
+    <div class="row">
+
+        <button type="submit" class="btn btn-success">Save</button>
+        <a href="/TourTrongNuoc/Index" class="btn btn-danger">Cancel</a>
+
+    </div>
+</form>
