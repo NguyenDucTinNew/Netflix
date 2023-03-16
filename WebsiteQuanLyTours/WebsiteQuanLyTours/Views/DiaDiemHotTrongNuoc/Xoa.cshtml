@@ -1,0 +1,23 @@
+﻿@model WebsiteQuanLyTours.Models.DiaDiemHotTrongNuoc
+
+@{
+    ViewBag.Title = "Xoa";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>Xoa</h2>
+
+<form action="/DiaDiemHotTrongNuoc/Xoa/@Model.MaDiaDiemHotTrongNuoc" method="post">
+    <input type="hidden" name="MaDiaDiemHotTrongNuoc" value="@Model.MaDiaDiemHotTrongNuoc" />
+    <table class="table">
+
+
+        <tr>
+            <th>Địa điểm hot nước ngoài</th>
+            <td>@Model.DiaDiemHotTrongNuoc1</td>
+        </tr>
+
+    </table>
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a href="/DiaDiemHotTrongNuoc/Index" class="btn btn-dark">Cancel</a>
+</form>

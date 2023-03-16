@@ -1,0 +1,30 @@
+﻿@model WebsiteQuanLyTours.Models.LoaiTour
+
+@{
+    ViewBag.Title = "ChinhSua";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>ChinhSua</h2>
+
+<form action="/loaiTours/ChinhSua/@Model.MaLoaiTour" method="post">
+    <input type="hidden" name="MaLoaiTour" value="@Model.MaLoaiTour" />
+    <div class="row">
+        <div class="col-md-6">
+            <label for="loaiTours">Địa điểm hot nước ngoài</label>
+            <input type="text"
+                   class="form-control"
+                   id="loaiTours1"
+                   name="loaiTours1"
+                   placeholder="loai Tours"
+                   value="@Model.LoaiTours" />
+        </div>
+
+    </div>
+    <div class="row">
+
+        <button type="submit" class="btn btn-success">Save</button>
+        <a href="/loaiTours/Index" class="btn btn-danger">Cancel</a>
+
+    </div>
+</form>

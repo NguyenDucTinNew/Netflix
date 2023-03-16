@@ -1,0 +1,157 @@
+﻿
+@model List<WebsiteQuanLyTours.Models.Tour>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+@section SideBarQuanLyTours
+{
+    <a href="/LoaiTours/index" class="list-group-item text-white" style="color:transparent">Loại tour </a>
+    <a href="/TourTheoChuDe/index" class="list-group-item text-white" style="color:transparent">Tour theo chủ đề </a>
+    <a href="/TourTrongNuoc/index" class="list-group-item text-white" style="color:transparent">Tour trong nước</a>
+    <a href="/TourNuocNgoai/index" class="list-group-item text-white" style="color:transparent">Tour nước ngoài</a>
+    <a href="/DiaDiemHotTrongNuoc/index" class="list-group-item text-white" style="color:transparent">Địa điểm hot trong nước </a>
+    <a href="/DiaDiemHotNuocNgoai/index" class="list-group-item text-white" style="color:transparent">Địa điểm hot nước ngoài</a>
+}
+
+<a href="/QuanLyTours/ThemMoi">Thêm mới </a>
+<form class="d-flex-row align-items-center flex-wrap" action="/QuanLyTours/index">
+    <label for="search" class="mx-2 my-1">Search</label>
+    <input type="search" class="form-control w-auto" id="search" name="search" placeholder="Search" value="@ViewBag.search" />
+    <button type="submit" class=" btn btn-primary mx-2 ">go</button>
+</form>
+@{
+    string iconClass = " ";
+    if (ViewBag.IconClass == "fa-sort-desc")
+    {
+        iconClass = "fa-sort-asc";
+    }
+    else
+    {
+        iconClass = "fa-sort-desc";
+    }
+}
+<table class="table">
+    <tr>
+        <th>
+            <a href="/QuanLyTours/index?SortColumn=MaTour&IconClass=@iconClass">Mã tour</a>
+            @if (ViewBag.SortColumn == "MaTour")
+            {
+                <i class="fa @ViewBag.IconClass"></i>
+            }
+        </th>
+        <th>
+            <a href="/QuanLyTours/index?SortColumn=TenTour&IconClass=@iconClass">Tên tour</a>
+            @if (ViewBag.SortColumn == "TenTour")
+            {
+                <i class="fa @ViewBag.IconClass"></i>
+            }
+        </th>
+        <th>
+            <a href="/QuanLyTours/index?SortColumn=ThoiGianTour&IconClass=@iconClass">ThoiGianTour</a>
+            @if (ViewBag.SortColumn == "ThoiGianTour")
+            {
+                <i class="fa @ViewBag.IconClass"></i>
+            }
+        </th>
+        <th>
+            <a href="/QuanLyTours/index?SortColumn=Gia&IconClass=@iconClass">Giá</a>
+            @if (ViewBag.SortColumn == "Gia")
+            {
+                <i class="fa @ViewBag.IconClass"></i>
+            }
+        </th>
+
+        <th>Chương trình tour</th>
+        <th>Mã loại tour</th>
+        <th>Mã chủ đề </th>
+        <th>Mã tour nước ngoài</th>
+        <th>Mã tour trong nước</th>
+        <th>Mã địa điểm hot nước ngoài</th>
+        <th>Mã địa điểm hot trong nước</th>
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+
+
+            <td>@item.MaTour</td>
+            <td><a href="/QuanLyTours/HienThi/@item.MaTour">@item.TenTour</a></td>
+            <td>@item.ThoiGianTour.Value.ToString("dd-MM-yyyy")</td>
+            <td>@item.Gia.Value.ToString("C")</td>
+            <td>@item.ChuongTrinhTour</td>
+            <td>@item.LoaiTour.LoaiTours</td>
+            <td>@item.TourTheoChuDe.TourTheoChuDe1</td>
+            <td>@item.TourNuocNgoai.TourNuocNgoai1</td>
+            <td>@item.TourTrongNuoc.TourTrongNuoc1</td>
+            <td>@item.DiaDiemHotNuocNgoai.DiaDiemHotNuocNgoai1</td>
+            <td>@item.DiaDiemHotTrongNuoc.DiaDiemHotTrongNuoc1</td>
+            <td><a href="/QuanLyTours/ChinhSua/@item.MaTour">Edit</a></td>
+            <td><a href="/QuanLyTours/Xoa/@item.MaTour">Delete</a></td>
+        </tr>
+    }
+    <tr>
+        <td class="col-9">
+            @{
+                int PrevPage = ViewBag.Page - 1;
+                if (PrevPage <= 0)
+                {
+                    PrevPage = 1;
+                }
+                int NextPage = ViewBag.Page + 1;
+                if (NextPage > ViewBag.NoOfPages)
+                {
+                    NextPage = ViewBag.NoOfPages;
+                }
+            }
+            <ul class="pagination justify-content-center">
+                <li class="page-item ">
+
+                    <a class="page-link" href="/QuanLyTours/index?SortColumn=@ViewBag.SortColumn&IconClass=@ViewBag.IconClass&page=@PrevPage">
+                        Prev
+                    </a>
+
+                </li>
+                @for (int i = 0; i < ViewBag.NoOfPages; i++)
+                {
+
+                    if (i + 1 == ViewBag.Page)
+                    {
+                        <li class="page-item active">
+
+                            <a class="page-link" href="/QuanLyTours/index?SortColumn=@ViewBag.SortColumn&IconClass=@ViewBag.IconClass&page=@(i+1)">
+                                @(i+1)
+                            </a>
+
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="page-item ">
+
+                            <a class="page-link" href="/QuanLyTours/index?SortColumn=@ViewBag.SortColumn&IconClass=@ViewBag.IconClass&page=@(i+1)">
+                                @(i+1)
+                            </a>
+
+                        </li>
+                    }
+
+                }
+                <li class="page-item ">
+
+                    <a class="page-link active" href="/QuanLyTours/index?SortColumn=@ViewBag.SortColumn&IconClass=@ViewBag.IconClass&page=@NextPage">
+                        Next
+                    </a>
+
+                </li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+
+
+
