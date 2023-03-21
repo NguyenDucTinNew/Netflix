@@ -1,0 +1,33 @@
+﻿@model websitequanlutours.Models.DiaDiemHotNuocNgoai
+
+@{
+    ViewBag.Title = "ThemMoi";
+
+}
+
+<h2>ThemMoi</h2>
+
+<form action="/Admin/DiaDiemHotNuocNgoai/ThemMoi" method="post">
+    <div class="row">
+        <div class="col-md-6">
+            @*
+                
+            <label for="DiaDiemHotNuocNgoai1">Địa điểm hot nước ngoài</label>
+            <input type="text"
+                   class="form-control"
+                   id="DiaDiemHotNuocNgoai1"
+                   name="DiaDiemHotNuocNgoai1"
+                   placeholder="Dia Diem Hot Nuoc Ngoai1" />
+            *@
+            @Html.TextBoxFor(row => row.MaDiaDiemHotNuocNgoai, new { @class = "form-control", placeholder = "Dia diem hot nuoc ngoai" })
+            @Html.ValidationMessageFor(row => row.MaDiaDiemHotNuocNgoai)
+        </div>
+       
+    </div>
+    <div class="row">
+
+        <button type="submit" class="btn btn-success">Tạo</button>
+        <a href="/Admin/DiaDiemHotNuocNgoai/Index" class="btn btn-danger">Cancel</a>
+
+    </div>
+</form>

@@ -1,0 +1,33 @@
+﻿@model WebsiteQuanLyTours.Models.LoaiTour
+
+@{
+    ViewBag.Title = "ThemMoi";
+}
+
+<h2>ThemMoi</h2>
+
+
+<form action="/Admin/LoaiTours/ThemMoi" method="post">
+    <div class="row">
+        <div class="col-md-6">
+            @*
+                
+            <label for="LoaiTours">Loại tour</label>
+            <input type="text"
+                   class="form-control"
+                   id="LoaiTours"
+                   name="LoaiTours"
+                   placeholder="Loai tours" />
+            *@
+            @Html.TextBoxFor(row => row.MaLoaiTour, new { @class = "form-control", placeholder = "Loai tour" })
+            @Html.ValidationMessageFor(row => row.MaLoaiTour)
+        </div>
+
+    </div>
+    <div class="row">
+
+        <button type="submit" class="btn btn-success">Tạo</button>
+        <a href="/Admin/LoaiTours/Index" class="btn btn-danger">Cancel</a>
+
+    </div>
+</form>
