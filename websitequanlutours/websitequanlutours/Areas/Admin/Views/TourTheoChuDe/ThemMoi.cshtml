@@ -1,0 +1,33 @@
+﻿@model WebsiteQuanLyTours.Models.TourTheoChuDe
+
+@{
+    ViewBag.Title = "ThemMoi";
+
+}
+
+<h2>ThemMoi</h2>
+
+<form action="/Admin/TourTheoChuDe/ThemMoi" method="post">
+    <div class="row">
+        <div class="col-md-6">
+            @*
+                
+            <label for="TourTheoChuDe1">Địa điểm hot nước ngoài</label>
+            <input type="text"
+                   class="form-control"
+                   id="TourTheoChuDe1"
+                   name="TourTheoChuDe1"
+                   placeholder="Tour Theo Chu De" />
+            *@
+            @Html.TextBoxFor(row => row.MaChuDe, new { @class = "form-control", placeholder = "Chu De" })
+            @Html.ValidationMessageFor(row => row.MaChuDe)
+        </div>
+
+    </div>
+    <div class="row">
+
+        <button type="submit" class="btn btn-success">Tạo</button>
+        <a href="/Admin/TourTheoChuDe/Index" class="btn btn-danger">Cancel</a>
+
+    </div>
+</form> 
