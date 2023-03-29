@@ -29,30 +29,6 @@ namespace websitequanlutours.Areas.Admin.Controllers
             return View(loaiTours);
 
         }
-
-
-
-        public ActionResult ThemMoi()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public ActionResult ThemMoi(LoaiTour p)
-        {
-            if (ModelState.IsValid)
-            {
-
-                db.LoaiTours.Add(p);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            else
-            {
-                return RedirectToAction("ThemMoi");
-            }
-        }
-
         public ActionResult ChinhSua(int id)
         {
             LoaiTour tour = db.LoaiTours.Where(row => row.MaLoaiTour == id).FirstOrDefault();
