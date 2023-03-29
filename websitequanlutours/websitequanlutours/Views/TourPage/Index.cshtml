@@ -1,0 +1,26 @@
+﻿@model List<websitequanlutours.Models.Tour>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/NguoiDungLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<div class="row row-cols-1 row-cols-md-5 g-4">
+    @foreach(var item in Model)
+            {
+                <div class="col">
+                    <div class="card">
+                        <img src="https://picsum.photos/200" class="card-img-top"
+                             alt="@item.TenTour" />
+                        <div class="card-body">
+                            <h5 class="card-title">@item.TenTour</h5>
+                            <p class="card-text">@item.Gia</p>
+                            <p class="card-text"><small class="text-muted">Loại tour: @item.LoaiTour.LoaiTours</small></p>
+                            <p class="card-text"><small class="text-muted">Loại tour: @item.TourTheoChuDe.TourTheoChuDe1</small></p>
+                        </div>
+                    </div>
+
+                </div>
+            }
+</div> 
