@@ -1,6 +1,4 @@
-﻿body {
-}
-* {
+﻿* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,18 +8,61 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     font-weight: 400;
-    background: white;
-    color: white;
+    color:gray;
+}
+/*   Top Nav    */
+#topnav {
+    overflow: hidden;
 }
 
-div {
+#logo{
+    float:left;
+    text-align:center;
+    position:fixed;
+}
+
+#topnav ul li {
+    align-content: center;
+    background-color: transparent;
     display: block;
-    position: relative;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
 }
 
+#topnav ul li a {
+    padding: 14px 16px;
+    font-size: 17px;
+}
+
+#topnav ul li a:hover{
+    background-color:aqua;
+}
+
+#searchbar,#btnsearch {
+    padding: 6px;
+    margin-top: 10px;
+    font-size: 17px;
+    border: none;
+    background-color:transparent;
+}
+
+#searchbar{
+    display:none;
+}
+
+#login-item{
+    float:right;
+    position:relative;
+    text-align:center;
+}
+
+
+/*   Section    */
+section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+
+/*   Footer    */
 footer {
     border: 1px solid black;
     margin-top: 40px;
@@ -31,42 +72,3 @@ footer {
     text-align: center;
 }
 
-.middle-layout {
-    text-align: center;
-}
-
-.logo {
-    text-align: center;
-}
-
-.login {
-    width: 100px;
-    position: relative;
-    left: 50px;
-    margin-right: 10px;
-}
-
-.signup {
-    width: 100px;
-    position: relative;
-    left: 50px;
-}
-
-.searchbar {
-    width: 100px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 13px;
-    background-color: white;
-    background-image: url('/Content/Image/Header/searchicon.jpg');
-    background-position: 10px 10px;
-    background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-}
-
-    .searchbar:focus {
-        width: 100%;
-    }
