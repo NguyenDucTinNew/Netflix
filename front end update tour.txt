@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#example1 {
+  text-align: center;
+font-size: 30x; 
+  border: 2px solid black;
+  padding: 25px;
+  background: url(mountain.jpg);
+  background-repeat: no-repeat;
+  background-size: auto;
+padding-left: 0px;
+#Button-cus
+{
+padding-top
+}
+
+}
+.row{
+ padding-top: 10px;}
+</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<article>
+  <header>
+  <container>
+  <div id="example1">
+   <p> Header </p>
+    </div>
+    </container>
+  </header>
+
+</article>
+<div class="container-fluid">
+  
+  <div class="row">
+    <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6" >
+     <div id="example1">
+   <p> images</p>
+    </div>
+    </div>
+  <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6">
+      Ten tour</br>
+      Gia tour</br>
+     <div id="Button-cus">
+<button type="button">Click Me!</button>
+<button type="button">Click Me!</button>
+</div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6" >
+     <div id="example1">
+   <p> images</p>
+    </div>
+    </div>
+  <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6">
+      Ten tour</br>
+      Gia tour</br>
+     <div id="Button-cus">
+<button type="button">Click Me!</button>
+<button type="button">Click Me!</button>
+</div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6" >
+     <div id="example1">
+   <p> images</p>
+    </div>
+    </div>
+  <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6">
+      Ten tour</br>
+      Gia tour</br>
+     <div id="Button-cus">
+<button type="button">Click Me!</button>
+<button type="button">Click Me!</button>
+</div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6" >
+     <div id="example1">
+   <p> images</p>
+    </div>
+    </div>
+  <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6">
+      Ten tour</br>
+      Gia tour</br>
+     <div id="Button-cus">
+<button type="button">Click Me!</button>
+<button type="button">Click Me!</button>
+</div>
+    </div>
+    </div>
+    
+</div>
+
+</body>
+</html>
