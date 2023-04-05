@@ -1,0 +1,26 @@
+﻿@model websitequanlutours.Models.Tour
+
+@{
+    ViewBag.Title = "Xoa";
+   
+}
+
+<h2>Xoa</h2>
+
+<form action="/Admin/QuanLyTours/Xoa/@Model.MaTour" method="post">
+    <input type="hidden" name="MaTour" value="@Model.MaTour" />
+    <table class="table">
+      
+        <tr>
+            <th>Têm tour</th>
+            <td>@Model.TenTour</td>
+        </tr>
+        <tr>
+            <th>Gía Tour</th>
+            <td>@Model.Gia</td>
+        </tr>
+
+    </table>
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a href="/QuanLyTours/Index" class="btn btn-dark">Cancel</a> 
+</form>
