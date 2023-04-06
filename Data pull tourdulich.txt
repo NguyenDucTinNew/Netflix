@@ -1,0 +1,133 @@
+Insert Into TourTrongNuocs(TourTrongNuoc1)
+Values(N'Tour Nam Du'),
+( N'Tour Long An'),
+( N'Tour Quảng Bình'),
+( N'Tour Bình Thuận'),
+( N'Tour Đồng Nai'),
+( N'Tour Thái Nguyên'),
+( N'Tour Buôn Mê Thuộc'),
+( N'Tour Ninh Thuận '),
+( N'Tour Sóc Trăng'),
+( N'Tour Vinh'),
+( N'Tour Bù Gia Mập'),
+( N'Tour Gia Lai'),
+( N'Tour Miền Tây'),
+( N'Tour Điện Biên'),
+( N'Tour Cao Bằng'),
+( N'Tour Bình Liêu'),
+( N'Tour Bình Phước'),
+( N'Tour Cam ranh'),
+( N'Tour Lý Sơn'),
+( N'Tour Sơn La'),
+( N'Tour Bắc Kạn'),
+( N'Tour Trà Vinh'),
+( N'Tour Khánh Hòa'),
+( N'Tour Hồ Trị An'),
+( N'Tour Quảng Ngãi'),
+( N'Tour Cà Mau'),
+( N'Tour Phú Qúy'),
+( N'Tour Lạng Sơn'),
+( N'Tour Lào Cai'),
+( N'Tour Diệp Sơn'),
+( N'Tour Đăk Nông'),
+( N'Tour  Lâm Đồng'),
+( N'Tour Kon Tum'),
+( N'Tour Đắk Lắk');
+ 
+Insert Into TourNuocNgoais(TourNuocNgoai1)
+Values
+(N'Tour Châu Á'),
+(N'Tour Châu Âu'),
+(N'Tour Đức-FGA'),
+(N'Tour Hungagy'),
+(N'Tour Thụy Sỹ'),
+(N'Tour Monaco'),
+(N'Tour Paris'),
+(N'Tour Pháp-CDG'),
+(N'Tour Thụy Sỹ-Ý-Áo-Hungary-Slovakia-Séc-Đức'),
+(N'Tour Canada'),
+(N'Tour Úc'),
+(N'Tour Bỉ'),
+(N'Tour Argentina'),
+(N'Tour Cộng Hòa Séc'),
+(N'Tour Anh'),
+(N'Tour Ý'),
+(N'Tour Bali'),
+(N'Tour Cộng Hòa Áo'),
+(N'Tour Thổ Nhĩ Kỳ'),
+(N'Luxembourg'),
+(N'Tour Nam Phi'),
+(N'Tour Alaska'),
+(N'Tour Châu Phi'),
+(N'Tour Nepal'),
+(N'Tour Bhutan'),
+(N'Tour Ấn Độ'),
+(N'Tour New Zealand'),
+(N'Tour Tây Ban Nha'),
+(N'Tour Bồ Đào Nhà'),
+(N'Tour Qatar'),
+(N'Tour Thụy Điển'),
+(N'Tour Na Uy'),
+(N'Tour Sri Lanka'),
+(N'Tour Brunei'),
+(N'Tour Isarel'),
+(N'Tour Maroc'),
+(N'Tour Pakistan'),
+(N'Tour Kazakhstan') ;
+
+Insert Into TourTheoChuDes(TourTheoChuDe1)
+Values
+(N'Tour Đông Tây Bắc'),
+(N'Tour Ưu Đãi Đặc Biệt Hôm Nay'),
+(N'Tour Tết Qúy Mão 2023'),
+(N'Tour Giáng Sinh Và Năm Mới 2023'),
+(N'Tour Du Lịch Độc Đáo'),
+(N'Tour Trải Nghiệm Địa Phương'),
+(N'Tour Nước Ngoài Cao Cấp'),
+(N'Tour Nội Địa Cao Cấp'),
+(N'Tour Nghĩ Dưỡng'),
+(N'Tour Du Lịch Miền Trung'),
+(N'Trãi Nghiệm Mùa Thu '),
+(N'Trãi Nghiệm Theo Cá Tính '),
+(N'Tour Thám Hiểm'),
+(N'Tây Bắc Mùa Lúa Chính '),
+(N'Chùm Tour Mùa Hoa Anh Đào'),
+(N'Chùm Tour Lễ 30/4 '),
+(N'Du Lịch Bằng Xe Lửa'),
+(N'City Breaks Ngắn Ngày'),
+(N'Vi Vu Cuối Tuần'),
+(N'Tour Siêu Du Thuyển 5 sao');
+Insert Into DiaDiemHotTrongNuocs(DiaDiemHotTrongNuoc1)
+Values
+(N'Sapa'),
+(N'Hạ Long'),
+(N'Đà Nẵng'),
+(N'Buôn Mê Thuộc'),
+(N'Hà Nội'),
+(N'Phú Quốc'),
+(N'Nha Trang'),
+(N'Quy Nhơn'),
+(N'Phú Yên'),
+(N'Miền Tây');
+Insert Into DiaDiemHotNuocNgoais(DiaDiemHotNuocNgoai1)
+Values
+(N'Trung Quôc'),
+(N'Thái Lan'),
+(N'Singapore'),
+(N'Thụy Sỹ'),
+(N'Châu Âu'),
+(N'Indonesia'),
+(N'Nhật Bản'),
+(N'Hàn Quốc'),
+(N'Đài Loan'),
+(N'Campuchia');
+INSERT INTO LoaiTours(LoaiTours)
+Values(N'Trọn Gói' );
+INSERT INTO LoaiTours(LoaiTours)
+Values(N'Tour Land' );
+INSERT INTO LoaiTours(LoaiTours)
+Values(N'Free Easy' );
+INSERT INTO LoaiTours(LoaiTours)
+Values(N'Daily Tour' );
+INSERT INTO LoaiTours(LoaiTours)
+Values(N'TravelMate' );
