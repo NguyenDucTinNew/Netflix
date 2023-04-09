@@ -1,0 +1,83 @@
+﻿`<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <script src="~/Scripts/jquery-3.6.3.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <title>@ViewBag.Title</title>
+
+    <style>
+        .field-validation-error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-sm bg-info navbar-dark>
+        <a class="navbar-brand" href="#">logo</a>
+        <div class="col-8">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/home/index">Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/TourPage/Index">Tours</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/home/lienhe">Liên hệ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/home/gioithieu">Giới thiệu</a>
+                </li>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Account/logout">Đăng xuất</a>
+                    </li>
+                }
+                else
+                {
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Account/DangKy">Đăng ký</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Account/DangNhap">Đăng nhập</a>
+                    </li>
+                }
+
+
+            </ul>
+
+        </div>
+        @ViewBag.Message
+
+        @if (User.Identity.IsAuthenticated)
+        {
+            <div style="color:red;font-weight:bold">
+                Hello @User.Identity.Name
+            </div>
+        }
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2 text-white" style=" background-color:#5bb2f0;min-height:1050px;padding:0">
+                <a href="#" class="list-group-item text-white" style="color:transparent">mục yêu thích </a>
+                <a href="#" class="list-group-item text-white" style="color:transparent">điều chỉnh </a>
+                <a href="#" class="list-group-item text-white" style="color:transparent">hóa đơn của bán </a>
+                @RenderSection("SideBar", required: false) @* required : false khong bao loi khi gap trang kh view dinh dang*@
+              
+            </div>
+            <div class="col-10" style="min-height:610px;">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+</html> 

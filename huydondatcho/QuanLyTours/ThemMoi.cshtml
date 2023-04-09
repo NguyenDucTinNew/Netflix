@@ -1,0 +1,144 @@
+﻿@model websitequanlutours.Models.Tour
+
+@{
+    ViewBag.Title = "ThemMoi";
+    Layout = "~/Areas/Admin/Views/Shared/AdminLayoutPage.cshtml";
+}
+
+<h2>Thêm mới tour</h2>
+@*
+    <form action="/QuanLyTours/ThemMoi" method="post"></form>
+*@
+
+
+
+
+
+@using (Html.BeginForm("ThemMoi", "QuanLyTours", new { area = "Admin" }, FormMethod.Post, new { enctype = "multipart/dorm-data" }))
+{
+
+    <div class="row">
+
+        <div class="col-md-6">
+           
+                @Html.LabelFor(row => row.TenTour)
+                @Html.TextBoxFor(row => row.TenTour, new { @class = "form-control", placeholder = "Tên tour" })
+                @Html.ValidationMessageFor(row => row.TenTour)
+
+           
+
+
+        </div>
+        <div class="col-md-6" >
+            <label for="ThoiGianTour">Thời gian tour</label>
+
+            @*
+
+            *@
+            <input type="date"
+                   class="form-control"
+                   id="ThoiGianTour"
+                   name="ThoiGianTour"
+                   placeholder="Thoi Gian Tour" />
+            <span id="loithoigiantour"></span>
+        </div>
+        <div class="col-md-6">
+            <label for="Gia">Giá</label>
+            @Html.TextBoxFor(row => row.Gia, new { @class = "form-control", placeholder = "Giá" })
+            @Html.ValidationMessageFor(row => row.Gia)
+
+        </div>
+        <div class="col-md-6">
+            <label for="ChuongTrinhTour">Chương trình tour</label>
+            @Html.TextBoxFor(row => row.ChuongTrinhTour, new { @class = "form-control", placeholder = "Chương trình tour" })
+            @Html.ValidationMessageFor(row => row.ChuongTrinhTour)
+
+        </div>
+        <div class="col-md-6">
+
+
+            @Html.LabelFor(model => model.ImageFile, htmlAttributes: new { @class = "control-label col-md-2" })
+
+
+            <input type="file"
+                   name="ImageFile"
+                   id="ImageFile"
+                    placeholder=""
+                   class="form-control" />
+
+        </div>
+
+        <div class="col-md-6">
+            <label for="MaLoaiTour">Loại tuor</label>
+       
+
+           
+                @Html.DropDownListFor(row => row.MaLoaiTour, new SelectList(ViewBag.LoaiTours, "MaLoaiTour", "LoaiTours"), ""
+               , new { @class = "form-control" })
+                @Html.ValidationMessageFor(row => row.MaLoaiTour)
+           
+
+        </div>
+        <div class="col-md-6">
+            <label for="MaChuDe"> Chủ đề</label>
+            
+                @Html.DropDownListFor(row => row.MaChuDe, new SelectList(ViewBag.TourTheoChuDe, "MaChuDe", "TourTheoChuDe1"), ""
+                                                                              , new { @class = "form-control" })
+                @Html.ValidationMessageFor(row => row.MaChuDe)
+          
+
+
+        </div>
+        <div class="col-md-6">
+            <label for="MaTourNuocNgoai"> Tour nước ngoài</label>
+          
+            @Html.DropDownListFor(row => row.MaTourNuocNgoai, new SelectList(ViewBag.TourNuocNgoai, "MaTourNuocNgoai", "TourNuocNgoai1"), ""
+                                                              , new { @class = "form-control" })
+            @Html.ValidationMessageFor(row => row.MaTourNuocNgoai)
+            
+          
+            
+        </div>
+        <div class="col-md-6">
+            <label for="MaTourTrongNuoc">Tour trong nước </label>
+
+            @Html.DropDownListFor(row => row.MaTourTrongNuoc, new SelectList(ViewBag.TourTrongNuoc, "MaTourTrongNuoc", "TourTrongNuoc1"), ""
+                                                              , new { @class = "form-control" })
+            @Html.ValidationMessageFor(row => row.MaTourTrongNuoc)
+           
+        </div>
+        <div class="col-md-6">
+            <label for="MaDiaDiemHotNuocNgoai">Địa điểm hot nước ngoài</label>
+
+           
+            @Html.DropDownListFor(row => row.MaDiaDiemHotNuocNgoai, new SelectList(ViewBag.DiaDiemHotNuocNgoai, "MaDiaDiemHotNuocNgoai", "DiaDiemHotNuocNgoai1"), ""
+                                                              , new { @class = "form-control" })
+@*            @Html.ValidationMessageFor(row => row.MaDiaDiemHotNuocNgoai)*@
+          
+        </div>
+        <div class="col-md-6">
+            <label for="MaDiaDiemHotTrongNuoc">Địa điểm hot trong nước</label>
+           
+            @Html.DropDownListFor(row => row.MaDiaDiemHotTrongNuoc, new SelectList(ViewBag.DiaDiemHotTrongNuoc, "MaDiaDiemHotTrongNuoc", "DiaDiemHotTrongNuoc1"), ""
+                                                              , new { @class = "form-control" })
+            @Html.ValidationMessageFor(row => row.MaDiaDiemHotTrongNuoc)
+           
+            
+        </div>
+    </div>
+    @*@Html.ValidationSummary()
+    <h2 class="color">@ViewBag.h1</h2>*@
+    <div class="row-cols-auto">
+
+        <button type="submit" class="btn btn-success" id="btn btn-success">Tạo</button>
+        <a href="/Admin/QuanLyTours/Index" class="btn btn-danger">Cancel</a>
+
+    </div>
+}
+
+<style>
+    .color {
+        color: red;
+    }
+</style>
+
