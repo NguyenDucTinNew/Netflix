@@ -1,0 +1,251 @@
+﻿
+@{ ViewBag.Title = "Index";
+                Layout = "~/Views/Shared/_LayoutMain.cshtml"; }
+<link rel="stylesheet" href="~/Content/CSS/LayoutMain.css" />
+
+
+<body>
+    
+    <!-- Carousel -->
+    <div class="container-fluid">
+        <div class="container-md">
+            <div id="demo" class="carousel slide" data-bs-ride="carousel">
+                <!-- Indicators/dots -->
+                <div class="carousel-indicators">
+                    <button type="button"
+                            data-bs-target="#demo"
+                            data-bs-slide-to="0"
+                            class="active"></button>
+                    <button type="button"
+                            data-bs-target="#demo"
+                            data-bs-slide-to="1"></button>
+                    <button type="button"
+                            data-bs-target="#demo"
+                            data-bs-slide-to="2"></button>
+                </div>
+
+                <!-- The slideshow/carousel -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="~/Content/Image/99-thuyen_hoa.jpg"
+                             alt="Los Angeles"
+                             class="d-block"
+                             style="width: 100%;height: 600px;" />
+                        <div class="carousel-caption">
+                            <h3>Phố Cổ Hội An</h3>
+                            <p>Tour Cao Cấp Đà Nẵng 4N3Đ: Huế - Quảng Bình - Đà Nẵng - Bà Nà - Hội An</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/Content/Image/hinh-anh-da-lat-mo-suong.jpg"
+                             alt="Chicago"
+                             class="d-block"
+                             style="width: 100%;height: 600px;" />
+                        <div class="carousel-caption">
+                            <h3>Thành Phố Đà Lạt</h3>
+                            <p>Tour Đà Lạt 3N2Đ: Đà Lạt - Thành Phố Ngàn Hoa</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/Content/Image/images1089892_1.jpg"
+                             alt="New York"
+                             class="d-block"
+                             style="width: 100%;height: 600px;" />
+                        <div class="carousel-caption">
+                            <h3>Vịnh Hạ Long</h3>
+                            <p>Tour Hạ Long 2N1Đ: Vịnh Hạ Long - Hạ Long Park - Bãi Cháy</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Left and right controls/icons -->
+                <button class="carousel-control-prev"
+                        type="button"
+                        data-bs-target="#demo"
+                        data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next"
+                        type="button"
+                        data-bs-target="#demo"
+                        data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+            <hr class="featurette-divider" />
+        </div>
+        <div class="container marketing">
+            <!-- Three columns of text below the carousel -->
+            <div class="row">
+                <div class="col-lg-4">
+                    <img style="width: 140px; height: 140px; border-radius: 70px;" src="~/Content/Image/Romantic.jpg" alt="">
+                    <h2 class="fw-normal">Lãng Mạn</h2>
+                    <p>Đi khắp thế gian, yêu thương ngập tràn</p>
+                    <p><a class="btn btn-secondary" href="#">Xem chi tiết »</a></p>
+                </div>
+                <!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <img style="width: 140px; height: 140px; border-radius: 70px;" src="~/Content/Image/tet-2.jpg" alt="">
+                    <h2 class="fw-normal">Du Xuân</h2>
+                    <p>Chào năm tươi mới</p>
+                    <p><a class="btn btn-secondary" href="#">Xem chi tiết »</a></p>
+                </div>
+                <!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <img style="width: 140px; height: 140px; border-radius: 70px;" src="~/Content/Image/du-lich-team-building-2.jpg" alt="">
+                    <h2 class="fw-normal">Team Bonding</h2>
+                    <p>Uư đãi cho khách đoàn</p>
+                    <p><a class="btn btn-secondary" href="#">Xem chi tiết »</a></p>
+                </div>
+                <!-- /.col-lg-4 -->
+            </div>
+            <!-- /.row -->
+            <!-- START THE FEATURETTES -->
+
+            <hr class="featurette-divider" />
+
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading fw-normal lh-1">
+                        Ưu đãi tốt nhất hôm nay
+                    </h2>
+                    <p class="lead">
+                        Nhanh tay đặt ngay. Để mai sẽ lỡ
+                    </p>
+                    <a href="">Xem chi tiết »</a>
+                </div>
+                <div class="col-md-5">
+                    <img style="width: 100%; height: 300px;" src="~/Content/Image/e97c1ce9a96cc7993ca3255aa8e2defb.png" alt="">
+
+                </div>
+            </div>
+
+            <hr class="featurette-divider" />
+
+            <div class="row featurette">
+                <h2 class="featurette-heading fw-normal lh-1">
+                    Tour Hot Trong Nước
+                </h2>
+                <p class="lead">
+                    Lên rừng xuống biển. Trọn vẹn Việt Nam
+                </p>
+                <div class="container marketing">
+                    <div class="d-inline-flex p-3 bg-secondary  row">
+                        <div class="p-2 col-lg-4">
+                            <div class="card" style="width:400px">
+                                <img class="card-img-top" src="~/Content/Image/nhagadalat.jpg" alt="Card image">
+                                <div class="card-body">
+                                    <h4 class="card-title">Tour Đà Lạt 3N2Đ : Đà Lạt - Thành Phố Ngàn Hoa</h4>
+                                    <div class="text d-inline-flex">
+                                        <div class="card-text row" style="color: black;">
+                                            <div class="rate float-left">Đánh giá: 4.7 <i class="fa-solid fa-star"></i></div>
+                                            <div style="float: left;">Giá: 3.000.000 vnđ</div>
+                                        </div>
+                                        <a href="#" class="btn btn-primary" style="width: fit-content;">Xem chi tiết » </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-2 col-lg-4">
+                            <div class="card" style="width:400px">
+                                <img class="card-img-top" src="~/Content/Image/nhagadalat.jpg" alt="Card image">
+                                <div class="card-body">
+                                    <h4 class="card-title">Tour Đà Lạt 3N2Đ : Đà Lạt - Thành Phố Ngàn Hoa</h4>
+                                    <div class="text d-inline-flex">
+                                        <div class="card-text row" style="color: black;">
+                                            <div class="rate float-left">Đánh giá: 4.7 <i class="fa-solid fa-star"></i></div>
+                                            <div style="float: left;">Giá: 3.000.000 vnđ</div>
+                                        </div>
+                                        <a href="#" class="btn btn-primary" style="width: fit-content;">Xem chi tiết » </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-2 col-lg-4">
+                            <div class="card" style="width:400px">
+                                <img class="card-img-top" src="~/Content/Image/nhagadalat.jpg" alt="Card image">
+                                <div class="card-body">
+                                    <h4 class="card-title">Tour Đà Lạt 3N2Đ : Đà Lạt - Thành Phố Ngàn Hoa</h4>
+                                    <div class="text d-inline-flex">
+                                        <div class="card-text row" style="color: black;">
+                                            <div class="rate float-left">Đánh giá: 4.7 <i class="fa-solid fa-star"></i></div>
+                                            <div style="float: left;">Giá: 3.000.000 vnđ</div>
+                                        </div>
+                                        <a href="#" class="btn btn-primary" style="width: fit-content;">Xem chi tiết » </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="featurette-divider" />
+
+            <div class="row featurette">
+                <h2 class="featurette-heading fw-normal lh-1">
+                    Tour Hot Nước Ngoài
+                </h2>
+                <p class="lead">
+                    Bao la thế giới. Bốn bể là nhà
+                </p>
+                <div class="container marketing">
+                    <div class="d-inline-flex p-3 bg-secondary  row">
+                        <div class="p-2 col-lg-4">
+                            <div class="card" style="width:400px">
+                                <img class="card-img-top" src="~/Content/Image/nhagadalat.jpg" alt="Card image">
+                                <div class="card-body">
+                                    <h4 class="card-title">Tour Đà Lạt 3N2Đ : Đà Lạt - Thành Phố Ngàn Hoa</h4>
+                                    <div class="text d-inline-flex">
+                                        <div class="card-text row" style="color: black;">
+                                            <div class="rate float-left">Đánh giá: 4.7 <i class="fa-solid fa-star"></i></div>
+                                            <div style="float: left;">Giá: 3.000.000 vnđ</div>
+                                        </div>
+                                        <a href="#" class="btn btn-primary" style="width: fit-content;">Xem chi tiết » </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-2 col-lg-4">
+                            <div class="card" style="width:400px">
+                                <img class="card-img-top" src="~/Content/Image/nhagadalat.jpg" alt="Card image">
+                                <div class="card-body">
+                                    <h4 class="card-title">Tour Đà Lạt 3N2Đ : Đà Lạt - Thành Phố Ngàn Hoa</h4>
+                                    <div class="text d-inline-flex">
+                                        <div class="card-text row" style="color: black;">
+                                            <div class="rate float-left">Đánh giá: 4.7 <i class="fa-solid fa-star"></i></div>
+                                            <div style="float: left;">Giá: 3.000.000 vnđ</div>
+                                        </div>
+                                        <a href="#" class="btn btn-primary" style="width: fit-content;">Xem chi tiết » </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-2 col-lg-4">
+                            <div class="card" style="width:400px">
+                                <img class="card-img-top" src="~/Content/Image/nhagadalat.jpg" alt="Card image">
+                                <div class="card-body">
+                                    <h4 class="card-title">Tour Đà Lạt 3N2Đ : Đà Lạt - Thành Phố Ngàn Hoa</h4>
+                                    <div class="text d-inline-flex">
+                                        <div class="card-text row" style="color: black;">
+                                            <div class="rate float-left">Đánh giá: 4.7 <i class="fa-solid fa-star"></i></div>
+                                            <div style="float: left;">Giá: 3.000.000 vnđ</div>
+                                        </div>
+                                        <a href="#" class="btn btn-primary" style="width: fit-content;">Xem chi tiết » </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="featurette-divider" />
+
+            <!-- /END THE FEATURETTES -->
+        </div>
+    </div>
+</body>
+<script src="https://kit.fontawesome.com/331feb0958.js" crossorigin="anonymous"></script>
+
+
