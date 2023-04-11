@@ -11,8 +11,10 @@ body {
     color:gray;
 }
 /*   Top Nav    */
-#topnav {
-    overflow: hidden;
+.header {
+    position: fixed;
+    width: 100%;
+    opacity:0.5;
 }
 
 #logo{
@@ -23,7 +25,6 @@ body {
 
 #topnav ul li {
     align-content: center;
-    background-color: transparent;
     display: block;
 }
 
@@ -41,7 +42,6 @@ body {
     margin-top: 10px;
     font-size: 17px;
     border: none;
-    background-color:transparent;
 }
 
 #searchbar{
@@ -54,7 +54,14 @@ body {
     text-align:center;
 }
 
-
+.carousel-slide {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    background: #31124b;
+}
 /*   Section    */
 section {
     margin-top: 40px;
@@ -72,3 +79,6 @@ footer {
     text-align: center;
 }
 
+.footer-top{
+    margin-bottom:2em;
+}

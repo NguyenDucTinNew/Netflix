@@ -10,14 +10,21 @@ namespace websitequanlutours.Controllers
 {
     public class TourPageController : Controller
     {
+        quanlytoursDBContext db = new quanlytoursDBContext();
         // GET: TourPage
         [MyAuthenFilter]
-       
-        public ActionResult Index()
+     
+        public ActionResult DanhSachTour()
         {
-            quanlytoursDBContext db = new quanlytoursDBContext();
             List<Tour> tours = db.tours.ToList();
             return View(tours);
+        }
+
+        public ActionResult HienThi(int id)
+        {
+            Tour pro = db.tours.Where(row => row.MaTour == id).FirstOrDefault();
+            return View(pro);
+
         }
     }
 }

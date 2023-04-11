@@ -1,0 +1,56 @@
+﻿@model List<websitequanlutours.Models.Tour>
+@{
+    ViewBag.Title = "Danh Sach Tour";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+
+<h2>Danh Sách Tour</h2>
+
+<div class="row row-cols-1 row-cols-md-5 g-4">
+    @foreach(var item in Model)
+            {
+                <div class="col">
+                    <div class="card">
+                        <img src="https://picsum.photos/200" class="card-img-top"
+                             alt="@item.TenTour" />
+                        <table>
+                            <tr>
+                                <th>
+                                    <h2>Tên tour</h2>
+                                </th>
+
+                                <th>
+                                    <h2>Giá tour</h2>
+                                </th>
+
+                                <th>
+                                    <h2>Loại tour</h2>
+                                </th>
+
+                                <th>
+                                    <h2>Tour theo chủ đề</h2>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>@item.TenTour</p>
+                                </td>
+
+                                <td>
+                                    <p>@item.Gia</p>
+                                </td>
+
+                                <td>
+                                    <p><small class="text-muted">Loại tour: @item.LoaiTour.LoaiTours</small></p>
+                                </td>
+
+                                <td>
+                                    <p><small class="text-muted">Loại tour: @item.TourTheoChuDe.TourTheoChuDe1</small></p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+            }
+</div> 
