@@ -1,0 +1,26 @@
+﻿@model List<websitequanlutours.Identity.AppUser>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Users</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Địa chỉ</th>
+        <th>Ngày sinh</th>
+    </tr>
+    @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.UserName</td>
+                    <td>@item.Email</td>
+                    <td>@item.Mobile</td>
+                    <td>@item.DiaChi</td>
+                    <td>@item.NgaySinh</td>
+                </tr>
+            }
+</table>
