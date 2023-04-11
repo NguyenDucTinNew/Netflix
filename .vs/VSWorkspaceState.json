@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\DoAnCNPM",
+    "\\DoAnCNPM\\websitequanlutours",
+    "\\DoAnCNPM\\websitequanlutours\\websitequanlutours\\Views",
+    "\\DoAnCNPM\\websitequanlutours\\websitequanlutours\\Views\\Home"
   ],
-  "SelectedNode": "\\websitequanlutours.sln",
+  "SelectedNode": "\\DoAnCNPM\\websitequanlutours\\websitequanlutours.sln",
   "PreviewInSolutionExplorer": false
 }

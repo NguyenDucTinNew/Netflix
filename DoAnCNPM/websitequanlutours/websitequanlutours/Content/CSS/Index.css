@@ -30,3 +30,10 @@
 .btn-secondary {
     background-color: blue;
 }
+.card-img-top{
+    height:300px;
+    width:100%;
+}
+.card-img-top>img{
+    height:100%;
+}
