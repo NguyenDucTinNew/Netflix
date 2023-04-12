@@ -1,26 +1,62 @@
-﻿@model List<websitequanlutours.Models.Tour>
+﻿
 @{
     ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/NguoiDungLayout.cshtml";
+    Layout = "~/Areas/Admin/Views/Shared/_AdLayout.cshtml";
 }
 
 <h2>Index</h2>
 
-<div class="row row-cols-1 row-cols-md-5 g-4">
-    @foreach(var item in Model)
-            {
-                <div class="col">
-                    <div class="card">
-                        <img src="https://picsum.photos/200" class="card-img-top"
-                             alt="@item.TenTour" />
-                        <div class="card-body">
-                            <h5 class="card-title">@item.TenTour</h5>
-                            <p class="card-text">@item.Gia</p>
-                            <p class="card-text"><small class="text-muted">Loại tour: @item.LoaiTour.LoaiTours</small></p>
-                            <p class="card-text"><small class="text-muted">Loại tour: @item.TourTheoChuDe.TourTheoChuDe1</small></p>
-                        </div>
-                    </div>
+<div class="list_of_members">
+    <div class="sales">
+        <div class="icon">
+            <i class="dollar"></i>
+        </div>
+        <div class="icon-text">
+            <h3>@ViewBag.TongDoanhThu</h3>
+            <p>Doanh Thu</p>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="new-users">
+        <div class="icon">
+            <i class="user1"></i>
+        </div>
+        <div class="icon-text">
+            <h3>@ViewBag.TongTK</h3>
+            <p>Tài Khoản</p>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="orders">
+        <div class="icon">
+            <i class="order"></i>
+        </div>
+        <div class="icon-text">
+            <h3>@ViewBag.TongDH</h3>
+            <p>Đơn Hàng</p>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="visitors">
+        <div class="icon">
+            <i class="visit"></i>
+        </div>
+        <div class="icon-text">
+            <h3>@ViewBag.SoNguoiTruyCap</h3>
+            <p>Người Truy Cập</p>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="visitors">
+        <div class="icon">
+            <i class="visit"></i>
+        </div>
+        <div class="icon-text">
+            <h3>@ViewBag.SoNguoiTruyCap</h3>
+            <p>Đang Online</p>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="clearfix"></div>
+</div>
 
-                </div>
-            }
-</div> 
