@@ -1,0 +1,169 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container-fluid {
+    text-align: center;
+}
+
+#grand-body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#tour-image {
+    height: auto;
+    width: 100%;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+#tour-note {
+    margin-bottom: 5px;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+
+/* Button Đặt hàng */
+.btnbuyTour {
+    align-items: center;
+    background-color: white;
+    border: 2px solid #111;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: black;
+    cursor: pointer;
+    display: flex;
+    font-family: Inter,sans-serif;
+    font-size: 16px;
+    height: 48px;
+    justify-content: center;
+    line-height: 24px;
+    max-width: 100%;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+    .btnbuyTour:after {
+        background-color: #111;
+        border-radius: 8px;
+        content: "";
+        display: block;
+        height: 48px;
+        left: 0;
+        width: 100%;
+        position: absolute;
+        top: -2px;
+        transform: translate(8px, 8px);
+        transition: transform .2s ease-out;
+        z-index: -1;
+    }
+
+    .btnbuyTour:hover:after {
+        transform: translate(0, 0);
+    }
+
+    .btnbuyTour:active {
+        background-color: lightcoral;
+        outline: 0;
+    }
+
+    .btnbuyTour:hover {
+        outline: 0;
+        background-color: lightcoral;
+    }
+
+@media (min-width: 768px) {
+    .btnbuyTour {
+        padding: 0 40px;
+    }
+}
+
+.icon {
+    position: relative;
+}
+
+
+.time-spend-group div {
+    margin-top: 5px;
+    margin-left: 4px;
+    justify-content: space-between;
+    text-align: center;
+}
+
+
+.tour-details {
+    height: auto;
+    width: 100%;
+    padding: 10px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+#text-important {
+    color: lightblue;
+    text-align: center;
+}
+
+#date-item {
+    text-align: center;
+    margin: 2px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+    #date-item:focus {
+        border: 2px solid blue;
+        width: 80%;
+        height: 80%;
+        text-align: center;
+        justify-content: center;
+    }
+
+#price-children {
+    display: none;
+}
+
+#quantityform {
+    text-align: center;
+    padding: 5px;
+    margin: 2%;
+}
+
+.qty {
+    width: 40px;
+    height: 25px;
+    text-align: center;
+}
+
+input.qtyplus {
+    width: 25px;
+    height: 25px;
+}
+
+input.qtyminus {
+    width: 25px;
+    height: 25px;
+}
+
+#detail-title {
+    color: blue;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#detail-info {
+    margin: 10px;
+    font-size: 15px;
+}
+
+#detail-img {
+    text-align: center;
+    display: block;
+    margin: auto;
+    margin-top: 5px;
+}
