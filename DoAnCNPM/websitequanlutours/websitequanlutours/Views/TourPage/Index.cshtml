@@ -1,0 +1,183 @@
+﻿@model List<websitequanlutours.Models.Tour>
+@{
+    ViewBag.Title = "Index";
+    
+}
+<style>
+    .a{
+        margin-left:20px;
+        line-height:50px;
+    }
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
+
+    .field-validation-error {
+        color: red;
+    }
+    .b{
+        line-height:50px;
+    }
+</style>
+<br />
+
+<main class="container">
+    <nav aria-label="breadcrumb ">
+        <ol class="breadcrumb breadcrumb-chevron p-3 bg-body-tertiary rounded-3 rounded shadow-lg">
+            <li class="breadcrumb-item">
+                <a href="#"><i class="fa fa-home" style="color:black; width:16px; height:16px;"></i></a>          
+            </li>
+            <li class="breadcrumb-item">
+                <a class="link-body-emphasis fw-semibold text-decoration-none" href="#">Tour </a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                Data
+            </li>
+        </ol>
+    </nav>
+    <div class="my-3 p-3 bg-body rounded shadow-lg">
+        <h6 class="border-bottom pb-2 mb-0">TOUR</h6>
+         @foreach (var item in Model)
+         {
+            <div class=" text-body-secondary pt-3">
+                <div class="row mb-3  w-100">
+                    <div class="col-3 themed-grid-col w-25">
+                        <div id="AnhBia">
+                            <img src="@Url.Content("~/HinhAnh/"+item.ImageFile)" width="100px" height="150px" />
+                        </div>
+                    </div>
+                    <div class="col-3 themed-grid-col w-50">
+                        <div class="col-11 themed-grid-col">
+                            <span>
+                                <a href="/TourPage/HienThi/@item.TourId">
+                                    @item.TenTour
+                                </a>
+                            </span>
+                        </div>
+                     
+                        <div class="col-7 themed-grid-col">
+                            <ul class="d-flex">
+                                <li class="a">
+                                    @if(item.LoaiTour != null)
+                                     {
+
+                                    @item.LoaiTour
+                                     }
+                                </li>                       
+                                <li class="a">
+                                    @if (item.ChuDe != null)
+                                    {
+                                        @item.ChuDe
+                                    }
+                                </li>
+                                <li class="a">
+                                    @if (item.TourTrongNuoc != null)
+                                    {
+                                        @item.TourTrongNuoc
+                                    }
+                                </li>
+                            </ul>
+                            <ul class="d-flex ">
+                                <li class="a">
+                                    @if (item.TourNuocNgoai != null)
+                                    {
+                                        @item.TourNuocNgoai
+                                    }
+                                </li>
+                                <li class="a">
+                                    @if (item.DiaDiemHotNuocNgoai != null)
+                                    {
+                                        @item.DiaDiemHotNuocNgoai
+                                    }
+                                </li>
+                                <li class="a">
+                                    @if (item.DiaDiemHotTrongNuoc != null)
+                                    {
+                                        @item.DiaDiemHotTrongNuoc
+                                    }
+                                </li>
+                            </ul>
+                        </div>             
+                    </div>
+                    <div class="col-3 themed-grid-col w-25 ">
+                        <ul class="list-inline">
+                            <li class="b">
+                                Giá: @item.Gia
+                            </li>
+                            <li class="b">
+                                Thời gian tour: @item.ThoiGianTour
+                            </li>
+                            <li class="b">
+                                 <a href="@Url.Action("AddToCart", "GioHang", new { id = item.TourId,Quantity = 1 })" class="btn btn-primary">Thêm vào giỏ hàng</a>
+                            </li>   
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr />
+         }       
+        <tr>
+            <td class="col-9">
+                @{
+                    int PrevPage = ViewBag.Page - 1;
+                    if (PrevPage <= 0)
+                    {
+                        PrevPage = 1;
+                    }
+                    int NextPage = ViewBag.Page + 1;
+                    if (NextPage > ViewBag.NoOfPages)
+                    {
+                        NextPage = ViewBag.NoOfPages;
+                    }
+                }
+                <ul class="pagination justify-content-center">
+                    <li class="page-item ">
+
+                        <a class="page-link" href="/Admin/QuanLyTours/index?SortColumn=@ViewBag.SortColumn&IconClass=@ViewBag.IconClass&page=@PrevPage">
+                            Prev
+                        </a>
+
+                    </li>
+                    @for (int i = 0; i < ViewBag.NoOfPages; i++)
+                    {
+
+                        if (i + 1 == ViewBag.Page)
+                        {
+                            <li class="page-item active">
+
+                                <a class="page-link" href="/Admin/QuanLyTours/index?SortColumn=@ViewBag.SortColumn&IconClass=@ViewBag.IconClass&page=@(i+1)">
+                                    @(i+1)
+                                </a>
+
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="page-item ">
+
+                                <a class="page-link" href="/Admin/QuanLyTours/index?SortColumn=@ViewBag.SortColumn&IconClass=@ViewBag.IconClass&page=@(i+1)">
+                                    @(i+1)
+                                </a>
+
+                            </li>
+                        }
+
+                    }
+                    <li class="page-item ">
+
+                        <a class="page-link active" href="/Admin/QuanLyTours/index?SortColumn=@ViewBag.SortColumn&IconClass=@ViewBag.IconClass&page=@NextPage">
+                            Next
+                        </a>
+
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    </div>
+
+
+</main>

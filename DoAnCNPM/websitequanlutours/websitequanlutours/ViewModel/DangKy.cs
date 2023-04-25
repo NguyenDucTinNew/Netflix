@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
+using websitequanlutours.Models;
 
 namespace websitequanlutours.ViewModel
 {
     public class DangKy
     {
+        
+       
         [Required(ErrorMessage = "Không để trống Username")]
         public string Username { get; set; }
         [Required(ErrorMessage =  "Không để trống Password")]
@@ -24,5 +27,8 @@ namespace websitequanlutours.ViewModel
         public DateTime? Birthday { get; set; }
         [Required(ErrorMessage = "Không để trống địa chỉ")]
         public string DiaChi { get; set; }
+
+       
+
     }
 }

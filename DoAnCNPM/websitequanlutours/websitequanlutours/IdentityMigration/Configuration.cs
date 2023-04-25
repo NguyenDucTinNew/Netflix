@@ -11,7 +11,6 @@
         {
             AutomaticMigrationsEnabled = false;
             MigrationsDirectory = @"IdentityMigration";
-            ContextKey = "websitequanlutours.Identity.AppDbContext";
         }
 
         protected override void Seed(websitequanlutours.Identity.AppDbContext context)

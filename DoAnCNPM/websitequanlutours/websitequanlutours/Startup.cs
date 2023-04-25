@@ -1,11 +1,12 @@
-﻿using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
+﻿using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.AspNet.Identity;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Owin;
-using System;
-using System.Threading.Tasks;
+
+
 using websitequanlutours.Identity;
+using Microsoft.Extensions.DependencyInjection;
 
 [assembly: OwinStartup(typeof(websitequanlutours.Startup))]
 
@@ -13,6 +14,8 @@ namespace websitequanlutours
 {
     public class Startup
     {
+
+        
         public void Configuration(IAppBuilder app)
         {
             app.UseCookieAuthentication(new CookieAuthenticationOptions()
@@ -22,6 +25,8 @@ namespace websitequanlutours
                 LoginPath = new PathString("/Account/DangNhap")
             });
             this.TaoRolesAndUsers();
+
+
         }
         public void TaoRolesAndUsers()
         {
@@ -52,6 +57,7 @@ namespace websitequanlutours
                 if (chkUser.Succeeded)
                 {
                     userManager.AddToRole(user.Id, "Admin");
+
                 }
             }
 
@@ -83,6 +89,8 @@ namespace websitequanlutours
                 roleManager.Create(role);
 
             }
+
+          
         }
     }
 }

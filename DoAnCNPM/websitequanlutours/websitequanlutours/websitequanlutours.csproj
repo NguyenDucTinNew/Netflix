@@ -59,7 +59,55 @@
     <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.3\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.1\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.EntityFrameworkCore, Version=3.1.32.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.EntityFrameworkCore.3.1.32\lib\netstandard2.0\Microsoft.EntityFrameworkCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore.Abstractions, Version=3.1.32.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.EntityFrameworkCore.Abstractions.3.1.32\lib\netstandard2.0\Microsoft.EntityFrameworkCore.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore.Relational, Version=3.1.32.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.EntityFrameworkCore.Relational.3.1.32\lib\netstandard2.0\Microsoft.EntityFrameworkCore.Relational.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Abstractions, Version=3.1.32.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Caching.Abstractions.3.1.32\lib\netstandard2.0\Microsoft.Extensions.Caching.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Memory, Version=3.1.32.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Caching.Memory.3.1.32\lib\netstandard2.0\Microsoft.Extensions.Caching.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration, Version=3.1.32.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.3.1.32\lib\netstandard2.0\Microsoft.Extensions.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=3.1.32.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Abstractions.3.1.32\lib\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Binder, Version=3.1.32.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Binder.3.1.32\lib\netstandard2.0\Microsoft.Extensions.Configuration.Binder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=3.1.32.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.3.1.32\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=3.1.32.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.3.1.32\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=3.1.32.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.3.1.32\lib\netstandard2.0\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=3.1.32.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.3.1.32\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=3.1.32.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.3.1.32\lib\netstandard2.0\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=3.1.32.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.3.1.32\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Owin, Version=4.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Owin.4.2.2\lib\net45\Microsoft.Owin.dll</HintPath>
     </Reference>
@@ -80,6 +128,31 @@
     </Reference>
     <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=1.2.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.7.1\lib\net461\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.7.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.7.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.1\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -125,9 +198,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\quanlytour.mdf" />
-    <Content Include="App_Data\quanlytour_log.ldf">
-      <DependentUpon>quanlytour.mdf</DependentUpon>
+    <Content Include="App_Data\quanlytours.mdf" />
+    <Content Include="App_Data\quanlytours_log.ldf">
+      <DependentUpon>quanlytours.mdf</DependentUpon>
     </Content>
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -145,8 +218,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
-    <Content Include="Content\CSS\ChiTietTour.css" />
-    <Content Include="Content\CSS\CustomerHome.css" />
+    <Content Include="Content\CSS\Index.css" />
     <Content Include="Content\CSS\LayoutMain.css" />
     <Content Include="Content\dist\css\bootstrap-grid.css" />
     <Content Include="Content\dist\css\bootstrap-grid.min.css" />
@@ -170,11 +242,151 @@
     <Content Include="Content\dist\js\bootstrap.esm.min.js" />
     <Content Include="Content\dist\js\bootstrap.js" />
     <Content Include="Content\dist\js\bootstrap.min.js" />
-    <Content Include="Content\Image\Header\home_slider.jpg" />
-    <Content Include="Content\Image\Header\searchicon.jpg" />
-    <Content Include="Content\JS\ChiTietTour.js" />
-    <Content Include="Content\JS\LayoutMain.js" />
+    <Content Include="Content\Image\Index\119218817662774954346470407058-1806-5581-1647597051.jpg" />
+    <Content Include="Content\Image\Index\99-thuyen_hoa.jpg" />
+    <Content Include="Content\Image\Index\Bangkok.jpg" />
+    <Content Include="Content\Image\Index\du-lich-team-building-2.jpg" />
+    <Content Include="Content\Image\Index\e97c1ce9a96cc7993ca3255aa8e2defb.png" />
+    <Content Include="Content\Image\Index\hinh-anh-da-lat-mo-suong.jpg" />
+    <Content Include="Content\Image\Index\hongkong-wallpaper-preview.jpg" />
+    <Content Include="Content\Image\Index\images1089892_1.jpg" />
+    <Content Include="Content\Image\Index\nhagadalat.jpg" />
+    <Content Include="Content\Image\Index\Phu-quy-....jpg" />
+    <Content Include="Content\Image\Index\Phuong-Hoang-Co-Tran.jpg" />
+    <Content Include="Content\Image\Index\Romantic.jpg" />
+    <Content Include="Content\Image\Index\shutterstockRF_1116550892.jpg" />
+    <Content Include="Content\Image\Index\tet-2.jpg" />
+    <Content Include="Content\Image\Index\vung-tau_1551676427.jpg" />
+    <Content Include="Content\js\dist\alert.js" />
+    <Content Include="Content\js\dist\base-component.js" />
+    <Content Include="Content\js\dist\button.js" />
+    <Content Include="Content\js\dist\carousel.js" />
+    <Content Include="Content\js\dist\collapse.js" />
+    <Content Include="Content\js\dist\dom\data.js" />
+    <Content Include="Content\js\dist\dom\event-handler.js" />
+    <Content Include="Content\js\dist\dom\manipulator.js" />
+    <Content Include="Content\js\dist\dom\selector-engine.js" />
+    <Content Include="Content\js\dist\dropdown.js" />
+    <Content Include="Content\js\dist\modal.js" />
+    <Content Include="Content\js\dist\offcanvas.js" />
+    <Content Include="Content\js\dist\popover.js" />
+    <Content Include="Content\js\dist\scrollspy.js" />
+    <Content Include="Content\js\dist\tab.js" />
+    <Content Include="Content\js\dist\toast.js" />
+    <Content Include="Content\js\dist\tooltip.js" />
+    <Content Include="Content\js\index.esm.js" />
+    <Content Include="Content\js\index.umd.js" />
+    <Content Include="Content\js\src\alert.js" />
+    <Content Include="Content\js\src\base-component.js" />
+    <Content Include="Content\js\src\button.js" />
+    <Content Include="Content\js\src\carousel.js" />
+    <Content Include="Content\js\src\collapse.js" />
+    <Content Include="Content\js\src\dom\data.js" />
+    <Content Include="Content\js\src\dom\event-handler.js" />
+    <Content Include="Content\js\src\dom\manipulator.js" />
+    <Content Include="Content\js\src\dom\selector-engine.js" />
+    <Content Include="Content\js\src\dropdown.js" />
+    <Content Include="Content\js\src\modal.js" />
+    <Content Include="Content\js\src\offcanvas.js" />
+    <Content Include="Content\js\src\popover.js" />
+    <Content Include="Content\js\src\scrollspy.js" />
+    <Content Include="Content\js\src\tab.js" />
+    <Content Include="Content\js\src\toast.js" />
+    <Content Include="Content\js\src\tooltip.js" />
+    <Content Include="Content\js\src\util\backdrop.js" />
+    <Content Include="Content\js\src\util\index.js" />
+    <Content Include="Content\js\src\util\sanitizer.js" />
+    <Content Include="Content\js\src\util\scrollbar.js" />
+    <Content Include="Content\js\tests\browsers.js" />
+    <Content Include="Content\js\tests\helpers\fixture.js" />
+    <Content Include="Content\js\tests\integration\bundle-modularity.js" />
+    <Content Include="Content\js\tests\integration\bundle.js" />
+    <Content Include="Content\js\tests\integration\index.html" />
+    <Content Include="Content\js\tests\integration\rollup.bundle-modularity.js" />
+    <Content Include="Content\js\tests\integration\rollup.bundle.js" />
+    <Content Include="Content\js\tests\karma.conf.js" />
+    <Content Include="Content\js\tests\unit\alert.spec.js" />
+    <Content Include="Content\js\tests\unit\base-component.spec.js" />
+    <Content Include="Content\js\tests\unit\button.spec.js" />
+    <Content Include="Content\js\tests\unit\carousel.spec.js" />
+    <Content Include="Content\js\tests\unit\collapse.spec.js" />
+    <Content Include="Content\js\tests\unit\dom\data.spec.js" />
+    <Content Include="Content\js\tests\unit\dom\event-handler.spec.js" />
+    <Content Include="Content\js\tests\unit\dom\manipulator.spec.js" />
+    <Content Include="Content\js\tests\unit\dom\selector-engine.spec.js" />
+    <Content Include="Content\js\tests\unit\dropdown.spec.js" />
+    <Content Include="Content\js\tests\unit\jquery.spec.js" />
+    <Content Include="Content\js\tests\unit\modal.spec.js" />
+    <Content Include="Content\js\tests\unit\offcanvas.spec.js" />
+    <Content Include="Content\js\tests\unit\popover.spec.js" />
+    <Content Include="Content\js\tests\unit\scrollspy.spec.js" />
+    <Content Include="Content\js\tests\unit\tab.spec.js" />
+    <Content Include="Content\js\tests\unit\toast.spec.js" />
+    <Content Include="Content\js\tests\unit\tooltip.spec.js" />
+    <Content Include="Content\js\tests\unit\util\backdrop.spec.js" />
+    <Content Include="Content\js\tests\unit\util\index.spec.js" />
+    <Content Include="Content\js\tests\unit\util\sanitizer.spec.js" />
+    <Content Include="Content\js\tests\unit\util\scrollbar.spec.js" />
+    <Content Include="Content\js\tests\visual\alert.html" />
+    <Content Include="Content\js\tests\visual\button.html" />
+    <Content Include="Content\js\tests\visual\carousel.html" />
+    <Content Include="Content\js\tests\visual\collapse.html" />
+    <Content Include="Content\js\tests\visual\dropdown.html" />
+    <Content Include="Content\js\tests\visual\modal.html" />
+    <Content Include="Content\js\tests\visual\popover.html" />
+    <Content Include="Content\js\tests\visual\scrollspy.html" />
+    <Content Include="Content\js\tests\visual\tab.html" />
+    <Content Include="Content\js\tests\visual\toast.html" />
+    <Content Include="Content\js\tests\visual\tooltip.html" />
+    <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
+    <Content Include="HinhAnh\336625215_706843674462586_3753686884141890236_n.jpg" />
+    <Content Include="HinhAnh\Bali-Bien.png" />
+    <Content Include="HinhAnh\Bali-Daorua.png" />
+    <Content Include="HinhAnh\Bali-ThacBlabg.png" />
+    <Content Include="HinhAnh\Buonmethuoc-Chuakhaidoan.png" />
+    <Content Include="HinhAnh\Buonmethuoc-langAko.png" />
+    <Content Include="HinhAnh\Campuchia-AbgkorWat.png" />
+    <Content Include="HinhAnh\Campuchia.png" />
+    <Content Include="HinhAnh\Dailoan-city.png" />
+    <Content Include="HinhAnh\Dailoan-longden.png" />
+    <Content Include="HinhAnh\Dailoan.png" />
+    <Content Include="HinhAnh\Danang-chuacau.png" />
+    <Content Include="HinhAnh\Danang-NguhanhSon.png" />
+    <Content Include="HinhAnh\DaNang-Phoco.png" />
+    <Content Include="HinhAnh\Halong.png" />
+    <Content Include="HinhAnh\Hanoi-hoguom.png" />
+    <Content Include="HinhAnh\Hanoi-Nhatholon.png" />
+    <Content Include="HinhAnh\Hanoi-vuonquocgiabavi.png" />
+    <Content Include="HinhAnh\HanQuoc-Everland.png" />
+    <Content Include="HinhAnh\HanQuoc-Seol.png" />
+    <Content Include="HinhAnh\mientay-kdlnuicam.png" />
+    <Content Include="HinhAnh\Mientay-mieubachuaxu.png" />
+    <Content Include="HinhAnh\NhatBan-Truottuyet.png" />
+    <Content Include="HinhAnh\NhatBan.png" />
+    <Content Include="HinhAnh\Nhatrang-bienDoclet.png" />
+    <Content Include="HinhAnh\Nhatrang-chualongson.png" />
+    <Content Include="HinhAnh\Nhatrang-daohoalan.png" />
+    <Content Include="HinhAnh\PhuQuoc-diatrunghai.png" />
+    <Content Include="HinhAnh\PhuQuoc-dinhcaudinhba.png" />
+    <Content Include="HinhAnh\Phuquoc-grandword.png" />
+    <Content Include="HinhAnh\Phuyen-ganhdadia.png" />
+    <Content Include="HinhAnh\Phuyen-Kyko.png" />
+    <Content Include="HinhAnh\PhuYen-nhathomanglang.png" />
+    <Content Include="HinhAnh\Quynhon-eogio.png" />
+    <Content Include="HinhAnh\QuyNhon-KDLghenh.png" />
+    <Content Include="HinhAnh\Sapa.png" />
+    <Content Include="HinhAnh\Sapa02.png" />
+    <Content Include="HinhAnh\Singapore-universal.png" />
+    <Content Include="HinhAnh\Singapore.png" />
+    <Content Include="HinhAnh\ThaiLan-Alcazar.png" />
+    <Content Include="HinhAnh\ThaiLan-Pattaya.png" />
+    <Content Include="HinhAnh\Thuysi-Canh.png" />
+    <Content Include="HinhAnh\ThuySy.png" />
+    <Content Include="HinhAnh\TQ-cuutraicau.png" />
+    <Content Include="HinhAnh\TQ-thanhdo.png" />
+    <Content Include="HinhAnh\TQ-trungkhanh.png" />
+    <Content Include="HinhAnh\Untitled.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -182,6 +394,11 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\Admin\Views\Users\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\QuanLyTours\ChinhSua.cshtml" />
+    <Content Include="Areas\Admin\Views\QuanLyTours\HienThi.cshtml" />
+    <Content Include="Areas\Admin\Views\QuanLyTours\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\QuanLyTours\ThemMoi.cshtml" />
+    <Content Include="Areas\Admin\Views\QuanLyTours\Xoa.cshtml" />
     <Content Include="Content\dist\css\bootstrap-grid.css.map" />
     <Content Include="Content\dist\css\bootstrap-grid.min.css.map" />
     <Content Include="Content\dist\css\bootstrap-grid.rtl.css.map" />
@@ -204,6 +421,25 @@
     <Content Include="Content\dist\js\bootstrap.esm.min.js.map" />
     <Content Include="Content\dist\js\bootstrap.js.map" />
     <Content Include="Content\dist\js\bootstrap.min.js.map" />
+    <Content Include="Content\js\dist\alert.js.map" />
+    <Content Include="Content\js\dist\base-component.js.map" />
+    <Content Include="Content\js\dist\button.js.map" />
+    <Content Include="Content\js\dist\carousel.js.map" />
+    <Content Include="Content\js\dist\collapse.js.map" />
+    <Content Include="Content\js\dist\dom\data.js.map" />
+    <Content Include="Content\js\dist\dom\event-handler.js.map" />
+    <Content Include="Content\js\dist\dom\manipulator.js.map" />
+    <Content Include="Content\js\dist\dom\selector-engine.js.map" />
+    <Content Include="Content\js\dist\dropdown.js.map" />
+    <Content Include="Content\js\dist\modal.js.map" />
+    <Content Include="Content\js\dist\offcanvas.js.map" />
+    <Content Include="Content\js\dist\popover.js.map" />
+    <Content Include="Content\js\dist\scrollspy.js.map" />
+    <Content Include="Content\js\dist\tab.js.map" />
+    <Content Include="Content\js\dist\toast.js.map" />
+    <Content Include="Content\js\dist\tooltip.js.map" />
+    <Content Include="Content\js\tests\README.md" />
+    <Content Include="Content\js\tests\unit\.eslintrc.json" />
     <None Include="Scripts\jquery-3.6.4.intellisense.js" />
     <Content Include="Scripts\jquery-3.6.4.js" />
     <Content Include="Scripts\jquery-3.6.4.min.js" />
@@ -220,16 +456,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\AdminController.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
-    <Compile Include="Areas\Admin\Controllers\DiaDiemHotNuocNgoaiController.cs" />
-    <Compile Include="Areas\Admin\Controllers\DiaDiemHotTrongNuocController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
-    <Compile Include="Areas\Admin\Controllers\LoaiToursController.cs" />
     <Compile Include="Areas\Admin\Controllers\QuanLyToursController.cs" />
-    <Compile Include="Areas\Admin\Controllers\TourNuocNgoaiController.cs" />
-    <Compile Include="Areas\Admin\Controllers\TourTheoChuDeController.cs" />
-    <Compile Include="Areas\Admin\Controllers\TourTrongNuocController.cs" />
     <Compile Include="Areas\Admin\Controllers\UsersController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\DanhMucController.cs" />
+    <Compile Include="Controllers\GioHangController.cs" />
+    <Compile Include="Controllers\HoaDonController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TourPageController.cs" />
     <Compile Include="Filters\AdminAuthorization.cs" />
@@ -237,36 +470,20 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="IdentityMigration\202303190156418_InitialCreate.cs" />
-    <Compile Include="IdentityMigration\202303190156418_InitialCreate.designer.cs">
-      <DependentUpon>202303190156418_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="IdentityMigration\202303200416447_init.cs" />
-    <Compile Include="IdentityMigration\202303200416447_init.designer.cs">
-      <DependentUpon>202303200416447_init.cs</DependentUpon>
-    </Compile>
     <Compile Include="IdentityMigration\Configuration.cs" />
     <Compile Include="Identity\AppDbContext.cs" />
     <Compile Include="Identity\AppUser.cs" />
     <Compile Include="Identity\AppUserManager.cs" />
     <Compile Include="Identity\AppUserStore.cs" />
-    <Compile Include="Migrations\202303190156418_InitialCreate.cs" />
-    <Compile Include="Migrations\202303190156418_InitialCreate.designer.cs">
-      <DependentUpon>202303190156418_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202303200417543_init.cs" />
-    <Compile Include="Migrations\202303200417543_init.designer.cs">
-      <DependentUpon>202303200417543_init.cs</DependentUpon>
+    <Compile Include="Migrations\202304251933476_111rrrr.cs" />
+    <Compile Include="Migrations\202304251933476_111rrrr.designer.cs">
+      <DependentUpon>202304251933476_111rrrr.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\DiaDiemHotNuocNgoai.cs" />
-    <Compile Include="Models\DiaDiemHotTrongNuoc.cs" />
-    <Compile Include="Models\LoaiTour.cs" />
+    <Compile Include="Models\CartItem.cs" />
+    <Compile Include="Models\HoaDon.cs" />
     <Compile Include="Models\quanlytoursDBContext.cs" />
     <Compile Include="Models\Tour.cs" />
-    <Compile Include="Models\TourNuocNgoai.cs" />
-    <Compile Include="Models\TourTheoChuDe.cs" />
-    <Compile Include="Models\TourTrongNuoc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModel\DangKy.cs" />
@@ -291,37 +508,8 @@
     <Content Include="Content\bootstrap-grid.rtl.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
-    <Content Include="Areas\Admin\Views\DiaDiemHotNuocNgoai\ChinhSua.cshtml" />
-    <Content Include="Areas\Admin\Views\DiaDiemHotNuocNgoai\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\DiaDiemHotNuocNgoai\ThemMoi.cshtml" />
-    <Content Include="Areas\Admin\Views\DiaDiemHotNuocNgoai\Xoa.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\AdminLayoutPage.cshtml" />
     <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
-    <Content Include="Areas\Admin\Views\DiaDiemHotTrongNuoc\ChinhSua.cshtml" />
-    <Content Include="Areas\Admin\Views\DiaDiemHotTrongNuoc\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\DiaDiemHotTrongNuoc\ThemMoi.cshtml" />
-    <Content Include="Areas\Admin\Views\DiaDiemHotTrongNuoc\Xoa.cshtml" />
-    <Content Include="Areas\Admin\Views\LoaiTours\ChinhSua.cshtml" />
-    <Content Include="Areas\Admin\Views\LoaiTours\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\LoaiTours\ThemMoi.cshtml" />
-    <Content Include="Areas\Admin\Views\LoaiTours\Xoa.cshtml" />
-    <Content Include="Areas\Admin\Views\QuanLyTours\ChinhSua.cshtml" />
-    <Content Include="Areas\Admin\Views\QuanLyTours\HienThi.cshtml" />
-    <Content Include="Areas\Admin\Views\QuanLyTours\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\QuanLyTours\ThemMoi.cshtml" />
-    <Content Include="Areas\Admin\Views\QuanLyTours\Xoa.cshtml" />
-    <Content Include="Areas\Admin\Views\TourNuocNgoai\ChinhSua.cshtml" />
-    <Content Include="Areas\Admin\Views\TourNuocNgoai\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\TourNuocNgoai\ThemMoi.cshtml" />
-    <Content Include="Areas\Admin\Views\TourNuocNgoai\Xoa.cshtml" />
-    <Content Include="Areas\Admin\Views\TourTheoChuDe\ChinhSua.cshtml" />
-    <Content Include="Areas\Admin\Views\TourTheoChuDe\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\TourTheoChuDe\ThemMoi.cshtml" />
-    <Content Include="Areas\Admin\Views\TourTheoChuDe\Xoa.cshtml" />
-    <Content Include="Areas\Admin\Views\TourTrongNuoc\ChinhSua.cshtml" />
-    <Content Include="Areas\Admin\Views\TourTrongNuoc\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\TourTrongNuoc\ThemMoi.cshtml" />
-    <Content Include="Areas\Admin\Views\TourTrongNuoc\Xoa.cshtml" />
     <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
     <None Include="packages.config" />
     <Content Include="Scripts\bootstrap.min.js.map" />
@@ -337,9 +525,15 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-3.6.4.slim.min.map" />
     <Content Include="Scripts\jquery-3.6.4.min.map" />
-    <Content Include="Views\TourPage\DanhSachTour.cshtml" />
-    <Content Include="Views\Shared\_LayoutMain.cshtml" />
+    <Content Include="Views\TourPage\Index.cshtml" />
+    <Content Include="Views\Shared\TrangChuLayoutPage.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\TourPage\HienThi.cshtml" />
+    <Content Include="Views\GioHang\Index.cshtml" />
+    <Content Include="Views\GioHang\ThemVaoGioHang.cshtml" />
+    <Content Include="Views\DanhMuc\LoaiTour.cshtml" />
+    <Content Include="Views\DanhMuc\TourTheoLoaiTour.cshtml" />
+    <Content Include="Views\DanhMuc\DanhMucLoaiTour.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -349,19 +543,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Views\HoaDon\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="IdentityMigration\202303190156418_InitialCreate.resx">
-      <DependentUpon>202303190156418_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="IdentityMigration\202303200416447_init.resx">
-      <DependentUpon>202303200416447_init.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202303190156418_InitialCreate.resx">
-      <DependentUpon>202303190156418_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202303200417543_init.resx">
-      <DependentUpon>202303200417543_init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202304251933476_111rrrr.resx">
+      <DependentUpon>202304251933476_111rrrr.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -1,0 +1,32 @@
+﻿
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/TrangChuLayoutPage.cshtml";
+}
+
+@using websitequanlutours.Models
+
+@model List<websitequanlutours.Models.CartItem>
+
+<h2>Giỏ hàng của bạn</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Sản phẩm</th>
+            <th>Số lượng</th>
+            <th>Giá tiền</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Tour.TenTour</td>
+                <td>@item.Quantity</td>
+                <td>@item.Tour.Gia.Value.ToString("N0")</td>
+            </tr>
+        }
+    </tbody>
+</table>

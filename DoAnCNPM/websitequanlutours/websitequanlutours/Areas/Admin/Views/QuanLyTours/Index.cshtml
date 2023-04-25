@@ -2,7 +2,7 @@
 @model List<websitequanlutours.Models.Tour>
 @{
     ViewBag.Title = "Index";
-  
+    Layout = "~/Areas/Admin/Views/Shared/AdminLayoutPage.cshtml";
 }
 
 @section SideBarQuanLyTours
@@ -63,13 +63,9 @@
             }
         </th>
 
-        <th>Chương trình tour</th>
-        <th>Mã loại tour</th>
-        <th>Mã chủ đề </th>
-        <th>Mã tour nước ngoài</th>
-        <th>Mã tour trong nước</th>
-        <th>Mã địa điểm hot nước ngoài</th>
-        <th>Mã địa điểm hot trong nước</th>
+       @* <th>Chương trình tour</th>*@
+        <th>Ảnh bìa</th>
+        
 
     </tr>
     @foreach (var item in Model)
@@ -81,13 +77,11 @@
             <td><a href="/Admin/QuanLyTours/HienThi/@item.MaTour">@item.TenTour</a></td>
             <td>@item.ThoiGianTour.Value.ToString("dd-MM-yyyy")</td>
             <td>@item.Gia.Value.ToString("C")</td>
-            <td>@item.ChuongTrinhTour</td>
-            <td>@item.LoaiTour.LoaiTours</td>
-            <td>@item.TourTheoChuDe.TourTheoChuDe1</td>
-            <td>@item.TourNuocNgoai.TourNuocNgoai1</td>
-            <td>@item.TourTrongNuoc.TourTrongNuoc1</td>
-            <td>@item.DiaDiemHotNuocNgoai.DiaDiemHotNuocNgoai1</td>
-            <td>@item.DiaDiemHotTrongNuoc.DiaDiemHotTrongNuoc1</td>
+@*            <td>@item.ChuongTrinhTour</td>
+*@            <td>
+                <div id="AnhBia"><img src="@Url.Content("~/HinhAnh/"+item.ImageFile)" width="100px" height="150px" /></div>
+            </td>
+            
             <td><a href="/Admin/QuanLyTours/ChinhSua/@item.MaTour">Edit</a></td>
             <td><a href="/Admin/QuanLyTours/Xoa/@item.MaTour">Delete</a></td>
         </tr>
