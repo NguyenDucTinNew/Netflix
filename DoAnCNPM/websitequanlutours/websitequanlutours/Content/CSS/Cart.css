@@ -1,0 +1,45 @@
+﻿.container-fuild {
+    height: fit-content;
+}
+
+.title {
+    height: 50px;
+    padding-top: 8px;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+table {
+    border: 1px solid black;
+}
+
+img {
+    width: 100px;
+    height: 70px;
+}
+
+th, td {
+    text-align: center;
+}
+
+    td > button {
+        border: none;
+        background-color: white;
+        color: rgba(126, 4, 4, 0.815);
+        margin-top: 20px;
+    }
+
+.button-pay > button {
+    width: 500px;
+    height: 60px;
+    position: relative;
+    left: 20%;
+    border-radius: 15px;
+    background-color: blue;
+    color: darkturquoise;
+    border: none;
+}
+
+    .button-pay > button:hover {
+        background-color: rgb(54, 65, 233);
+    }
