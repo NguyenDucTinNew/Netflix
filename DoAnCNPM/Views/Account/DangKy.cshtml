@@ -2,51 +2,85 @@
 
 @{
     ViewBag.Title = "DangKy";
-    Layout = "~/Views/Shared/NguoiDungLayout.cshtml";
+    Layout = "~/Views/Shared/AccountLayout.cshtml";
 }
 
-<h2>DangKy</h2>
-
-@using (Html.BeginForm("DangKy","Account",FormMethod.Post))
-            {
-
-    <div class="row">
-        <div class="col-md-6">
-            @Html.LabelFor(temp => temp.Username)
-            @Html.TextBoxFor(temp => temp.Username, new { placeholder = "Username", @class = "form-control" })
-            @Html.ValidationMessageFor(temp => temp.Username)
+<div class="overlay"></div>
+<div class="login-container">
+    <div>
+        <div class="logo">
+            <i class="fas fa-hat-wizard"></i>
+            <span>HUFLIT TOUR</span>
         </div>
-        <div class="col-md-6">
-            @Html.LabelFor(temp => temp.Email)
-            @Html.TextBoxFor(temp => temp.Email, new { placeholder = "Email", @class = "form-control" })
-            @Html.ValidationMessageFor(temp => temp.Email)
-        </div>
-        <div class="col-md-6">
-            @Html.LabelFor(temp => temp.Password)
-            @Html.PasswordFor(temp => temp.Password, new { placeholder = "Password", @class = "form-control" })
-            @Html.ValidationMessageFor(temp => temp.Password)
-        </div>
-        <div class="col-md-6">
-            @Html.LabelFor(temp => temp.ConfirmPassword)
-            @Html.PasswordFor(temp => temp.ConfirmPassword, new { placeholder = "ConfirmPassword", @class = "form-control" })
-            @Html.ValidationMessageFor(temp => temp.ConfirmPassword)
-        </div>
-        <div class="col-md-6">
-            @Html.LabelFor(temp => temp.Mobile)
-            @Html.TextBoxFor(temp => temp.Mobile, new {  placeholder = "Mobile", @class = "form-control" })
-            @Html.ValidationMessageFor(temp => temp.Mobile)
-        </div>
-        <div class="col-md-6">
-            @Html.LabelFor(temp => temp.Birthday)
-            @Html.TextBoxFor(temp => temp.Birthday, new { type = "date", placeholder = "Birthday", @class = "form-control" })
-            @Html.ValidationMessageFor(temp => temp.Birthday)
-        </div>
-        <div class="col-md-6">
-            @Html.LabelFor(temp => temp.DiaChi)
-            @Html.TextBoxFor(temp => temp.DiaChi, new { placeholder = "DiaChi", @class = "form-control" })
-            @Html.ValidationMessageFor(temp => temp.DiaChi)
-        </div>
+      
     </div>
-   
-    <button type="submit" class="btn btn-success">Đăng ký</button>
-            }    
+
+    <div class="form-login">
+        <form action="" method="POST" class="form" id="form-2">
+            <h3 class="heading">Đăng Ký</h3>
+          
+
+            <div class="form-group">
+
+                @Html.LabelFor(temp => temp.Username, "Tên Đăng Nhập")
+                @Html.TextBoxFor(temp => temp.Username, new { placeholder = "Tên Đăng Nhập", @class = "form-control" })
+                @Html.ValidationMessageFor(temp => temp.Username)
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(temp => temp.Email)
+                @Html.TextBoxFor(temp => temp.Email, new { placeholder = "Email", @class = "form-control" })
+                @Html.ValidationMessageFor(temp => temp.Email)
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(temp => temp.Password, "Mật Khẩu")
+                @Html.PasswordFor(temp => temp.Password, new { placeholder = "Mật Khẩu", @class = "form-control" })
+                @Html.ValidationMessageFor(temp => temp.Password)
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(temp => temp.ConfirmPassword, "Nhập Lại Mật Khẩu")
+                @Html.PasswordFor(temp => temp.ConfirmPassword, new { placeholder = "Nhập Lại Mật Khẩu", @class = "form-control" })
+                @Html.ValidationMessageFor(temp => temp.ConfirmPassword)
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(temp => temp.Mobile, "Số Điện Thoại")
+                @Html.TextBoxFor(temp => temp.Mobile, new { placeholder = "Số Điện Thoại", @class = "form-control" })
+                @Html.ValidationMessageFor(temp => temp.Mobile)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(temp => temp.Birthday, "Ngày Sinh")
+                @Html.TextBoxFor(temp => temp.Birthday, new { type = "date", placeholder = "Ngày Sinh", @class = "form-control" })
+                @Html.ValidationMessageFor(temp => temp.Birthday)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(temp => temp.DiaChi, "Địa Chỉ")
+                @Html.TextBoxFor(temp => temp.DiaChi, new { placeholder = "Địa Chỉ", @class = "form-control" })
+                @Html.ValidationMessageFor(temp => temp.DiaChi)
+            </div>
+
+            <div class="sign-up">
+                <div>
+                    <button type="submit" class="btn btn-success">Đăng ký</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+</div>
+<script>
+    $(document).ready(function () {
+        $('form').submit(function () {
+            var username = $.trim($('#Username').val());
+            var password = $.trim($('#Password').val());
+
+            if (username.length === 0 || password.length === 0) {
+                alert('Bạn cần nhập đầy đủ thông tin tài khoản.');
+                return false;
+            }
+        });
+    });
+</script>
